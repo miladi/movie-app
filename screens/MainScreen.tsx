@@ -167,7 +167,7 @@ const MainScreen: React.FC<Props> = ({ navigation }) => {
         contentContainerStyle={styles.listContainer}
       />
       {favorites.length > 0 && (
-        <View style={{ borderTopWidth: 1, borderTopColor: "gray" }}>
+        <View style={styles.ViewFavoritesContainer}>
           <Button
             title="View Favorites"
             onPress={() => navigation.navigate("Favorites", { favorites })}
@@ -210,6 +210,10 @@ const styles = StyleSheet.create({
   emptyText: {
     fontSize: 18,
     color: "gray",
+  },
+  ViewFavoritesContainer: {
+    borderTopWidth: 1,
+    borderTopColor: "gray",
   },
 });
 
